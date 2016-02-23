@@ -19,13 +19,33 @@ This is based on the [deep-freeze](https://github.com/substack/deep-freeze) libr
 ```javascript
 var deepLockdown = require('deep-lockdown');
 
-var myObj = { a: 'a', b: 'b', c: 'c' };
+var myObj = {
+  a: 'a',
+  b: 'b',
+  c: {
+    e: {
+      q: 'word'
+    }
+  }
+};
 
 deepLockdown(myObj);
 
 myObj.d = 'd';
 myObj.a = 'jkl';
+myObj.c.e.q = 'different-word';
+myObj.c.e.f = 'add-some-words';
 
-console.log(myObj); // { a: 'a', b: 'b', c: 'c' }
+console.log(myObj);
+```
+var myObj = {
+  a: 'a',
+  b: 'b',
+  c: {
+    e: {
+      q: 'word'
+    }
+  }
+};
 
 ```
