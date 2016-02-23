@@ -37,15 +37,17 @@ myObj.c.e.q = 'different-word';
 myObj.c.e.f = 'add-some-words';
 
 console.log(myObj);
-```
-var myObj = {
-  a: 'a',
-  b: 'b',
-  c: {
-    e: {
-      q: 'word'
-    }
-  }
-};
-
+/**
+ * Result Unchanged
+ *
+ var myObj = {
+   a: 'a',
+   b: 'b',
+   c: {
+     e: {
+       q: 'word'
+     }
+   }
+ };
+*/
 ```
